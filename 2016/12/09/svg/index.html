@@ -25,7 +25,7 @@
 &amp;lt;body&amp;gt;
     &amp;lt;svg width=&amp;quot;200&amp;quot; height=&amp;quot;200&amp;quot;&amp;gt;
     &amp;lt;/">
-<meta property="og:updated_time" content="2016-12-09T08:16:15.102Z">
+<meta property="og:updated_time" content="2016-12-09T08:34:08.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="svg">
 <meta name="twitter:description" content="svg(Scalable Vector Graphics):可缩放矢量图形，一种二维图形表示语言。
@@ -336,6 +336,49 @@
   &lt;polyline points=&quot;150,75 258,137.5 258,262.5 150,325 42,262.6 42,137.5&quot;
   stroke=&quot;orange&quot; stroke-width=&quot;5&quot; fill=&quot;none&quot;
   /&gt;
+&lt;/svg&gt;
+</code></pre><p>8.变换SVG元素</p>
+<p>svg中可以将多个元素结合起来，使他们形成一个组,变成一个整体。<br><code>&lt;g&gt;</code>元素代表”组”,可以用来结合多个相关的元素。组内的成员可以用ID来引用。些外,组也可以作为一个整体进行变换。如果你为组添加了变换属性,那么组中所有内容都会进行变换。变换属性包含了旋转、变形、缩放和斜切。</p>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;g transform=&quot;translate(60,0) rotate(30) scale(0.75)&quot; id=&quot;ShapeGroup&quot;&gt;
+        &lt;rect x=&quot;50&quot; y=&quot;20&quot; width=&quot;100&quot; height=&quot;80&quot; stroke=&quot;red&quot; fill=&quot;#ccc&quot;&gt;&lt;/rect&gt;
+        &lt;circle cx=&quot;120&quot; cy=&quot;80&quot; r=&quot;40&quot; stroke=&quot;#00f&quot; fill=&quot;none&quot; stroke-width=&quot;8&quot;&gt;&lt;/circle&gt;
+     &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre><p>9.复用内容<br>svg中的<defs>元素用于定义留待将来使用的内容。可以用<use></use>元素将<defs>定义的内容链接到需要展示的地方。借助这两个元素，你可以多次复用同一内容，消除冗余。</defs></defs></p>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;defs&gt;
+        &lt;g  id=&quot;ShapeGroup&quot;&gt;
+            &lt;rect x=&quot;50&quot; y=&quot;20&quot; width=&quot;100&quot; height=&quot;80&quot; stroke=&quot;red&quot; fill=&quot;#ccc&quot;&gt;&lt;/rect&gt;
+            &lt;circle cx=&quot;120&quot; cy=&quot;80&quot; r=&quot;40&quot; stroke=&quot;#00f&quot; fill=&quot;none&quot; stroke-width=&quot;8&quot;&gt;&lt;/circle&gt;
+        &lt;/g&gt;
+    &lt;/defs&gt;
+    &lt;use xlink:href=&quot;#ShapeGroup&quot; transform=&quot;translate(60,0)  scale(0.4)&quot;&gt;&lt;/use&gt;
+    &lt;use xlink:href=&quot;#ShapeGroup&quot; transform=&quot;translate(120,80)  scale(0.75)&quot;&gt;&lt;/use&gt;
+    &lt;use xlink:href=&quot;#ShapeGroup&quot; transform=&quot;translate(20,60)  scale(0.25)&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</code></pre><p>10.图案和渐变</p>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;defs&gt;
+        &lt;pattern id=&quot;GravelPattern&quot; patternContentUnits=&quot;userSpaceOnUse&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;67&quot; viewBox=&quot;0 0 100 67&quot;&gt;
+            &lt;image x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;67&quot; xlink:href=&quot;gravel.jpg&quot; /&gt;
+        &lt;/pattern&gt;
+        &lt;%--渐变--%&gt;
+        &lt;linearGradient id=&quot;RedBlackGradient&quot;&gt;
+            &lt;stop offset=&quot;0%&quot; stop-color=&quot;#000&quot;&gt;&lt;/stop&gt;
+            &lt;stop offset=&quot;100%&quot; stop-color=&quot;#f00&quot;&gt;&lt;/stop&gt;
+        &lt;/linearGradient&gt;
+    &lt;/defs&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;20&quot; width=&quot;100&quot; height=&quot;80&quot; stroke=&quot;red&quot; fill=&quot;url(#RedBlackGradient)&quot; /&gt;
+    &lt;circle cx=&quot;120&quot; cy=&quot;80&quot; r=&quot;40&quot; stroke=&quot;#00f&quot; stroke-width=&quot;8&quot; fill=&quot;url(#GravelPattern)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre><p>11.路径<br>svg不仅包含简单的形状，还包含自由形态的路径。path元素有一个d属性，代表路径数据。在d的值中，M代表移至(Move to)，L代表划线至(Line to),Q代表二次曲线，Z代表闭合路径。</p>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;path d=&quot;M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z&quot;  /&gt;
+&lt;/svg&gt;
+</code></pre><p>12.文本<br>svg中文本有点类型于CSS中对于样式的定义</p>
+<pre><code>&lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;text x=&quot;10&quot; y=&quot;80&quot; font-family=&quot;Droid Sans&quot; stroke=&quot;#00f&quot; fill=&quot;#00f&quot; font-size=&quot;40px&quot; font-weight=&quot;bold&quot;&gt;Hello SVG&lt;/text&gt;
 &lt;/svg&gt;
 </code></pre>
       
