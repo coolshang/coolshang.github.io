@@ -9,25 +9,25 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##使用svg画常见形状(相同参数就不讲解了)
-###1.绘制圆:
+  <meta name="description" content="使用svg画常见形状(相同参数就不讲解了)
+1.绘制圆:
 &amp;lt;svg width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;
-    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;q">
+    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;quot;5">
 <meta property="og:type" content="article">
 <meta property="og:title" content="svg">
 <meta property="og:url" content="https://coolshang.github.io/2016/12/09/svg/index.html">
 <meta property="og:site_name" content="酷傷的个人博客网站">
-<meta property="og:description" content="##使用svg画常见形状(相同参数就不讲解了)
-###1.绘制圆:
+<meta property="og:description" content="使用svg画常见形状(相同参数就不讲解了)
+1.绘制圆:
 &amp;lt;svg width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;
-    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;q">
-<meta property="og:updated_time" content="2016-12-09T06:55:30.873Z">
+    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;quot;5">
+<meta property="og:updated_time" content="2016-12-09T06:58:23.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="svg">
-<meta name="twitter:description" content="##使用svg画常见形状(相同参数就不讲解了)
-###1.绘制圆:
+<meta name="twitter:description" content="使用svg画常见形状(相同参数就不讲解了)
+1.绘制圆:
 &amp;lt;svg width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;
-    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;q">
+    &amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;45&amp;quot; stroke=&amp;quot;orange&amp;quot; stroke-width=&amp;quot;5">
   
     <link rel="alternative" href="/atom.xml" title="酷傷的个人博客网站" type="application/atom+xml">
   
@@ -243,8 +243,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##使用svg画常见形状(相同参数就不讲解了)</p>
-<p>###1.绘制圆:</p>
+        <p>使用svg画常见形状(相同参数就不讲解了)</p>
+<p>1.绘制圆:</p>
 <pre><code>&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
     &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;45&quot; stroke=&quot;orange&quot; stroke-width=&quot;5&quot; fill=&quot;red&quot; /&gt;
 &lt;/svg&gt;
@@ -254,14 +254,14 @@
 <li>cy左上角y距离</li>
 <li>stroke圆边框的颜色</li>
 <li>stroke-width圆边框的大小</li>
-<li><p>fill圆的颜色</p>
-<a id="more"></a>
-<p>###2.绘制矩形:</p>
- <svg width="500" height="400"><br/>   <rect x="10" y="10" width="300" height="150" style="fill:#ccc;stroke:orange;stroke-width:5px;"/><br/> </svg>
-
+<li>fill圆的颜色<a id="more"></a>
 </li>
 </ul>
-<p>参数讲解:</p>
+<p>2.绘制矩形:</p>
+<pre><code>&lt;svg width=&quot;500&quot; height=&quot;400&quot;&gt;
+  &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;fill:#ccc;stroke:orange;stroke-width:5px;&quot;/&gt;
+&lt;/svg&gt;
+</code></pre><p>参数讲解:</p>
 <ul>
 <li>x矩形左上角x距离</li>
 <li>y矩形左上角y距离</li>
@@ -269,7 +269,7 @@
 <li>height矩形高度</li>
 <li>style定义矩形的样式</li>
 </ul>
-<p>###3.绘制圆角矩形:</p>
+<p>3.绘制圆角矩形:</p>
 <pre><code>&lt;rect x=&quot;10&quot; y=&quot;210&quot; rx=&quot;50&quot; ry=&quot;100&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;fill:#ccc;stroke:orange;stroke-width:5px; stroke-opacity:.5;&quot; /&gt;
 </code></pre><p>参数讲解:</p>
 <ul>
@@ -278,7 +278,7 @@
 <li>css的stroke-opacity属性定义笔触颜色的透明度(取值范围:0~1)</li>
 <li>css的fill-opacity属性定义填充颜色透明度(取值范围:0~1)</li>
 </ul>
-<p>###4.绘制椭圆形:</p>
+<p>4.绘制椭圆形:</p>
 <pre><code>&lt;svg width=&quot;500&quot; height=&quot;400&quot;&gt;
   &lt;ellipse cx=&quot;150&quot; cy=&quot;100&quot; rx=&quot;90&quot; ry=&quot;50&quot; stroke=&quot;orange&quot; stroke-width=&quot;5&quot; fill=&quot;#cfcfcf&quot; fill-opacity=&quot;.6&quot; /&gt;
 &lt;/svg&gt;
@@ -289,7 +289,7 @@
 <li>rx水平半径</li>
 <li>ry垂直半径</li>
 </ul>
-<p>###5.绘制直线:<br>    <style><br>     svg { border: 1px solid red; }<br>    </style><br>    <svg width="500" height="500"><br/>      <line x1="0" y1="0" x2="250" y2="200" style="stroke:rgba(255,0,0,.5);stroke-width:5px;"/><br/>    </svg></p>
+<p>5.绘制直线:<br>    <style><br>     svg { border: 1px solid red; }<br>    </style><br>    <svg width="500" height="500"><br/>      <line x1="0" y1="0" x2="250" y2="200" style="stroke:rgba(255,0,0,.5);stroke-width:5px;"/><br/>    </svg></p>
 <p>参数讲解:</p>
 <ul>
 <li>x1线条起点x坐标</li>
@@ -297,7 +297,7 @@
 <li>x2线条终点x坐标</li>
 <li>y2线条终点y坐标</li>
 </ul>
-<p>###6.绘制多边形</p>
+<p>6.绘制多边形</p>
 <pre><code>&lt;svg width=&quot;500&quot; height=&quot;400&quot;&gt;
   &lt;polygon points=&quot;150,75 258,137.5 258,262.5 150,325 42,262.6 42,137.5&quot;
         stroke=&quot;orange&quot;
