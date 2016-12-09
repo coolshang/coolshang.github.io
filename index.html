@@ -212,7 +212,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用svg画常见形状(相同参数就不讲解了)</p>
+        <p>svg(Scalable Vector Graphics):可缩放矢量图形，一种二维图形表示语言。</p>
+<p>在页面中添加SVG</p>
+<p> 内联方式：像HTML中的其它元素一样使用，在此基础上可以编写HTML，JavaScript和SVG的交互应用。</p>
+<pre><code>&lt;body&gt;
+    &lt;svg width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;/svg&gt;
+&lt;/body&gt;
+</code></pre><p>外联方式：通过<img>元素，在HTML导入外部SVG文件，缺点是无法编写与SVG元素进行交互的脚本。</p>
+<pre><code>&lt;img src=&quot;example.svg&quot; /&gt;
+</code></pre><p>使用svg画常见形状(相同参数就不讲解了)</p>
 <p>1.绘制圆:</p>
 <pre><code>&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
     &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;45&quot; stroke=&quot;orange&quot; stroke-width=&quot;5&quot; fill=&quot;red&quot; /&gt;
